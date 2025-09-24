@@ -41,11 +41,11 @@ export default function EventDetails() {
             {loading && <h2>Loading...</h2>}
           </section>
           <section className="row">
-            <div className="col-md-8">
+            <div className="col-12 col-lg-8">
               <h1>{details?.title}</h1>
               <p className="m-0">Hosted By:</p>
               <h5>{details?.host}</h5>
-              <img src={details?.thumbnailUrl} className="my-3 rounded img-fluid w-100 h-50" />
+              <img src={details?.thumbnailUrl} className="my-3 rounded img-fluid" />
               <h3>Details:</h3>
               <p>{details?.description}</p>
               <h3>Additional Information:</h3>
@@ -60,8 +60,8 @@ export default function EventDetails() {
                 {details?.tag.join(" || ")}
               </p>
             </div>
-            <div className="col">
-              <div className="bg-white rounded-3 container">
+            <div className="col-lg-4 col-12">
+              <div className="bg-white rounded-3 container p-3">
                 <div className="row py-2">
                   <div className="col-1 my-3">&#x1F552;</div>
                   <div className="col">
@@ -99,4 +99,5 @@ export default function EventDetails() {
     </div>
   );
 }
+
 
