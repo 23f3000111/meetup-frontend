@@ -47,7 +47,7 @@ export default function EventDetails() {
               <h5>{details?.host}</h5>
               <img src={details?.thumbnailUrl} className="my-3 rounded img-fluid" />
               <h3>Details:</h3>
-              <p>{details?.description}</p>
+              <p style={{textAlign : "justify"}}>{details?.description}</p>
               <h3>Additional Information:</h3>
               <p className="mb-1">
                 <strong>Dress Code:</strong> {details?.dressCode}
@@ -99,5 +99,6 @@ export default function EventDetails() {
     </div>
   );
 }
+
 
 
