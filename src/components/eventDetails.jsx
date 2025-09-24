@@ -4,10 +4,10 @@ import { Link } from "react-router-dom";
 
 export default function EventDetails() {
   const eventId = useParams();
-  const { data, loading } = useFetch("http://localhost:3000/events");
+  const { data, loading } = useFetch("https://meetup-backend-azvc.vercel.app/events");
   const details = data?.find((d) => d._id == eventId.id);
 
-  const { data: speaker } = useFetch("http://localhost:3000/speakers");
+  const { data: speaker } = useFetch("https://meetup-backend-azvc.vercel.app/speakers");
   
   const filterSpeaker = speaker?.filter(speaker => speaker.title == details?.title)
   console.log(filterSpeaker);
@@ -99,3 +99,4 @@ export default function EventDetails() {
     </div>
   );
 }
+
